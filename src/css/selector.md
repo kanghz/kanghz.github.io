@@ -1,0 +1,127 @@
+# CSS基础教程 - 选择器
+选择器用于指定要应用样式的HTML元素。CSS提供了多种选择器，可以根据不同的需求选择合适的类型。
+
+## 元素选择器
+选择特定的HTML元素。
+
+```css
+/* 选择所有的 <p> 元素 */
+p {
+    color: blue;
+}
+/* 选择所有的 <div> 元素 */
+div {
+    font-size: 16px;
+    color: blue;
+}
+```
+
+## 类选择器
+使用类名选择元素。类名以`.`开头。
+
+```css
+/* 选择所有 class="highlight" 的元素 */
+.highlight {
+    background-color: yellow;
+}
+```
+
+## ID选择器
+使用ID选择元素。ID以`#`开头。
+
+```css
+/* 选择 id="header" 的元素 */
+#header {
+    font-size: 24px;
+}
+```
+
+## 组合选择器
+组合选择器可以更精确地选择元素。
+
+### 1 后代选择器
+选择某个元素的所有后代元素。
+
+```css
+/* 选择 <div> 中的所有 <p> 元素 */
+div p {
+    color: green;
+}
+```
+
+### 2 子选择器
+选择某个元素的直接子元素。
+
+```css
+/* 选择 <ul> 的直接子元素 <li> */
+ul > li {
+    list-style-type: square;
+}
+```
+
+### 3 相邻兄弟选择器
+选择紧接在另一个元素之后的兄弟元素。
+
+```css
+/* 选择紧跟在 <h1> 之后的 <p> 元素 */
+h1 + p {
+    font-weight: bold;
+}
+```
+
+### 4 通用兄弟选择器
+选择某个元素之后的所有兄弟元素。
+
+```css
+/* 选择 <h1> 之后的所有 <p> 元素 */
+h1 ~ p {
+    text-decoration: underline;
+}
+
+```
+
+## 伪类和伪元素
+伪类用于选择处于特定状态的元素，伪元素用于选择元素的特定部分。
+
+### 1 伪类
+```css
+/* 选择所有鼠标悬停的 <a> 元素 */
+a:hover {
+    color: red;
+}
+
+/* 选择第一个 <p> 元素 */
+p:first-child {
+    font-size: 18px;
+}
+
+/* 选择最后一个 <p> 元素 */
+p:last-child {
+    background-color: lightblue;
+}
+
+/* 选择奇数 <p> 元素 */
+p:nth-child(odd) {
+    background-color: lightgreen;
+}
+
+/* 选择偶数 <p> 元素 */
+p:nth-child(even) {
+    background-color: lightyellow;
+}
+```
+
+### 2 伪元素
+```css
+/* 在每个 <p> 元素前插入内容 */
+p::before {
+    content: "Note: ";
+    color: gray;
+}
+
+/* 在每个 <p> 元素后插入内容 */
+p::after {
+    content: " - End of paragraph";
+    color: gray;
+}
+```
