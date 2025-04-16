@@ -32,14 +32,11 @@ concurrency:
 jobs:
   # 构建任务
   build:
-
     runs-on: ubuntu-latest
-
     # node v20 运行
     strategy:
       matrix:
         node-version: [20]
-
     steps:
       # 拉取代码
       - name: Checkout
@@ -47,13 +44,11 @@ jobs:
         with:
           # 保留 Git 信息
           fetch-depth: 0
-
       # 设置使用 Node.js 版本
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-
       # 使用 最新的 PNPM
       # 你也可以指定为具体的版本
       - uses: pnpm/action-setup@v2
@@ -62,17 +57,14 @@ jobs:
           version: latest
           # version: 9
           run_install: false
-
         # 安装依赖
       - name: Install dependencies
         run: pnpm install
-
         # 构建项目
       - name: Build blog project
         run: |
           echo ${{ github.workspace }}
-          pnpm build
-
+          pnpm run build
         # 资源拷贝
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
