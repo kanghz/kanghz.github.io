@@ -4,5 +4,8 @@ yarn.lock
 package-lock.json
 yarn-error.log
 **/.DS_Store
-src/.vitepress/
 .vscode/
+
+#vitepress
+src/.vitepress/dist/
+src/.vitepress/cache/
