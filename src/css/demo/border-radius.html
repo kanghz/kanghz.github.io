@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Border Radius</title>
+  <style>
+    .section {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .section .title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .section .summary {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 1.5;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ccc;
+    }
+    .content {
+      padding: 20px 0;
+    }
+    .flex{
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+    .box{
+      width: 100px;
+      height: 50px;
+      border: 1px solid #4ecdc4;
+    }
+    .pill {
+      height: 30px;
+      border-radius: 15px; /* 高度的一半 */
+    }
+    .semi-circle {
+      border-radius: 50px 50px 0 0;
+    }
+    .ellipse{
+      border-radius: 50%;
+    }
+    .leaf {
+      height: 100px;
+      border-radius: 0 100% 0 100%;
+    }
+
+    .tag {
+      width: 120px;
+      height: 40px;
+      border: 1px solid #4ecdc4;
+      border-radius: 20px 5px 20px 5px;
+    }
+
+    .wave-divider {
+      width: 20px;
+      height: 10px;
+      border: 1px solid #4ecdc4;
+      border-top: 0 none;
+      border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    }
+
+    .progress-bar {
+      width: 200px;
+      height: 20px;
+      background: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress {
+      width: 75%;
+      height: 100%;
+      background: #4ecdc4;
+      border-radius: 10px 0 0 10px;
+      transition: width 0.3s ease;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 1px;
+    }
+
+    .button-group button {
+      padding: 8px 20px;
+      border: none;
+      background: #4ecdc4;
+      color: white;
+    }
+    /* 第一个按钮 */
+    .button-group button:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+    /* 最后一个按钮 */
+    .button-group button:last-child {
+      border-radius: 0 8px 8px 0;
+    }
+
+    .gradient-card {
+      width: 300px;
+      padding: 2px;
+      background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+      border-radius: 16px;
+      position: relative;
+    }
+
+    .gradient-card::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+      background: white;
+      border-radius: 14px;
+      border-radius: 15px;
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+      border-radius: 14px;
+      background: white;
+    }
+
+    .loading-dot {
+      width: 20px;
+      height: 20px;
+      background: #4ecdc4;
+      border-radius: 50%;
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { 
+        transform: scale(1);
+        border-radius: 50%;
+      }
+      50% {
+        transform: scale(1.4);
+        border-radius: 30%;
+      }
+      100% {
+        transform: scale(1);
+        border-radius: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="section">
+      <div class="title">基础形状</div>
+      <div class="group">
+        <div class="summary"> 胶囊按钮 </div>
+        <div class="content">
+          <div class="box pill"></div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="summary"> 半圆形导航 </div>
+        <div class="content">
+          <div class="box semi-circle"></div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="summary"> 椭圆 </div>
+        <div class="content">
+          <div class="box ellipse"></div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="summary"> 叶子形状 </div>
+        <div class="content">
+          <div class="box leaf"></div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="summary"> 不规则标签 </div>
+        <div class="content">
+          <div class="tag"></div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="summary"> 波浪形分割线 </div>
+        <div class="content">
+          <div class="flex">
+            <div class="box wave-divider"></div>
+            <div class="box wave-divider"></div>
+            <div class="box wave-divider"></div>
+            <div class="box wave-divider"></div>
+            <div class="box wave-divider"></div>
+            <div class="box wave-divider"></div>
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="summary"> 动态进度条 </div>
+        <div class="content">
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="summary"> 多边形按钮组 </div>
+        <div class="content">
+          <div class="button-group">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="summary"> 渐变边框卡片 </div>
+        <div class="content">
+          <div class="gradient-card">
+            <div class="card-content"></div>
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="summary"> 动态加载动画 </div>
+        <div class="content">
+          <div class="loading-dot"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -52,3 +52,4 @@
 - 如何实现文字垂直水平居中？
 - display:none、visibility:hidden和opacity:0的区别？
 - a 属于什么元素？
+- position stricky
