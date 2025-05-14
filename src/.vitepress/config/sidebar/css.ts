@@ -22,6 +22,7 @@ export const css = {
         { text: 'CSS你不知道的行高问题', link: '/css/CSS你不知道的行高问题' },
         { text: 'Width和Height详解', link: '/css/Width和Height详解' },
         { text: 'CSS中奇妙的弧线', link: '/css/CSS中奇妙的弧线' },
+        { text: '花里胡哨的CSS单位', link: '/css/花里胡哨的CSS单位' },
       ]
     }
   ],
