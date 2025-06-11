@@ -46,6 +46,7 @@
 - 字体图标
 - 花里胡哨的CSS单位
 - transform 先平移在旋转和先旋转再平移有什么区别
+- CSS 中可继承与不可继承属性有哪些
 - CSS Sprites
 - CSS BFC
 - CSS 性能优化实战

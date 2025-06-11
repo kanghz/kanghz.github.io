@@ -24,6 +24,7 @@ export const css = {
         { text: 'CSS中奇妙的弧线', link: '/css/CSS中奇妙的弧线' },
         { text: '花里胡哨的CSS单位', link: '/css/花里胡哨的CSS单位' },
         { text: '奇怪的Transform位移', link: '/css/位移' },
+        { text: 'CSS中的继承问题', link: '/css/CSS中的继承问题' },
       ]
     }
   ],

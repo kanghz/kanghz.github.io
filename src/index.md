@@ -10,6 +10,9 @@ hero:
     - theme: brand
       text: CSS基础教程
       link: /css
+    - theme: brand
+      text: JavaScript
+      link: /js
 
 features:
   - title: 盒模型
