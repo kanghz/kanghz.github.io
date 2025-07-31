@@ -1,6 +1,6 @@
 ---
 title: JavaScript 培训专栏介绍
-date: 2023-03-28
+date: 2025-07-15
 layout: doc
 ---
 # JavaScript 培训专栏介绍
