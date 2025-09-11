@@ -10,6 +10,8 @@ export const js = {
         { text: '位运算详解', link: '/js/位运算详解' },
         { text: '条件控制', link: '/js/条件控制' },
         { text: '循环的使用', link: '/js/循环' },
+        { text: '函数', link: '/js/函数' },
+        { text: '函数高级用法', link: '/js/函数高级用法' },
       ]
     }
   ],
