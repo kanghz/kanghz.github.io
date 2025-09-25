@@ -12,6 +12,9 @@ export const js = {
         { text: '循环的使用', link: '/js/循环' },
         { text: '函数', link: '/js/函数' },
         { text: '函数高级用法', link: '/js/函数高级用法' },
+        { text: '作用域', link: '/js/作用域' },
+        { text: '作用域常见问题', link: '/js/作用域常见问题' },
+        { text: '数组', link: '/js/数组' },
       ]
     }
   ],
